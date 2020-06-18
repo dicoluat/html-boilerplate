@@ -26,27 +26,42 @@ $text-color: rgb(34, 34, 34) !default;
 /// @type Color
 $brand-color: rgb(229, 0, 80) !default;
 
+/// White
+/// @type Color
+$white: #ECECEC;
+
 /// Light grey
 /// @type Color
-$light-grey: rgb(237, 237, 237) !default;
+$light-grey: #ECECEC;
 
 /// Medium grey
 /// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
+$mid-grey: #808080;
 
 /// Dark grey
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
+// Dark
+/// @type Color
+$dark: #242424;
 
+// Blue
+/// @type Color
+$blue: #0947D1;
 
+// Dark Blue
+/// @type Color
+$dark-blue: #0E2B8D;
+
+// Orange
+/// @type Color
+$orange: #FF7800;
 
 
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
-
-
 
 
 

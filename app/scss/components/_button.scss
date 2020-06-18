@@ -1,3 +1,76 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+$b-fonts: 'SemiBold', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+.button {
+  font-family: $b-fonts;
+  color: $dark-grey;
+  background-color: $light-grey;
+  font-size: .8rem;
+  padding: .8rem 1.1rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  display: inline-block;
+
+  &.full {
+    display: block;
+  }
+  &.round {
+    border-radius: .8rem;
+  }
+  &:hover {
+
+  }
+
+
+
+  &__primary {
+    color: $white;
+    background-color: $blue;
+    &:hover {
+      color: $light-grey;
+    }
+  }
+
+  &__orange {
+    color: $white;
+    background-color: $orange;
+    &:hover {
+      color: $light-grey;
+    }
+  }
+
+  &__secondary {
+    color: $white;
+    background-color: $orange;
+    &:hover {
+      color: $light-grey;
+    }
+  }
+
+  &__danger {
+    color: $white;
+    background-color: $orange;
+    &:hover {
+      color: $light-grey;
+    }
+  }
+
+  &__success {
+    color: $white;
+    background-color: $orange;
+    &:hover {
+      color: $light-grey;
+    }
+  }
+
+  &__warning {
+    color: $white;
+    background-color: $orange;
+    &:hover {
+      color: $light-grey;
+    }
+  }
+}
