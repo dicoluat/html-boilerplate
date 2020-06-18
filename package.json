@@ -1,0 +1,32 @@
+{
+  "name": "html-boilerplate",
+  "version": "1.0.0",
+  "description": "This is a sample project using the [7-1 architecture pattern](http://sass-guidelin.es/#architecture) and sticking to [Sass Guidelines](http://sass-guidelin.es) writing conventions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dicoluat/html-boilerplate.git"
+  },
+  "keywords": [
+    "html-boilerplate"
+  ],
+  "author": "Luat Dinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dicoluat/html-boilerplate/issues"
+  },
+  "homepage": "https://github.com/dicoluat/html-boilerplate#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-cache": "^1.1.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-twig": "^1.2.0",
+    "run-sequence": "^2.2.1"
+  }
+}

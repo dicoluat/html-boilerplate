@@ -1,0 +1,39 @@
+{% set arrScripts = arrScripts|default([]) %}
+{% set arrStyles = arrStyles|default([]) %}
+{% set components = components|default([]) %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>{{ title }}</title>
+
+    <!-- main.css -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    {% block styles %}
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <h1>Default</h1>
+{% endblock %}
+{% for item in components %}
+    {% for script in item.scripts %}
+        {% set arrScripts = arrScripts|merge([script]) %}
+    {% endfor %}
+    {% set arrScripts = arrScripts|merge(['assets/sections/js/'~item.type~'/'~item.type~'.js']) %}
+    {% for style in item.styles %}
+        {% set arrStyles = arrStyles|merge([style]) %}
+    {% endfor %}
+    {% set arrStyles = arrStyles|merge(['assets/sections/css/'~item.type~'/'~item.type~'.css']) %}
+    {% set componentData = item.data %}
+    {% include "../sections/"~item.type~"/"~item.type~item.sub~".twig" %}
+{% endfor %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./assets/js/main.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>
