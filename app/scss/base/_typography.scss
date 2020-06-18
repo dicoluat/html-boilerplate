@@ -6,3 +6,13 @@ body {
   font: normal 125% / 1.4 $text-font-stack;
 }
 
+h1 {
+  font-family: 'KotexVM-Bold';
+  color: $text-color;
+  span {
+    font-family: 'KotexVM-Light';
+    font-size: .7em;
+    padding-left: .2em;
+    color: $brand-color;
+  }
+}
