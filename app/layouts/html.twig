@@ -23,17 +23,20 @@
     {% for script in item.scripts %}
         {% set arrScripts = arrScripts|merge([script]) %}
     {% endfor %}
-    {% set arrScripts = arrScripts|merge(['assets/sections/js/'~item.type~'/'~item.type~'.js']) %}
+    {% set arrScripts = arrScripts|merge(['assets/js/sections/'~item.type~'/'~item.type~'.js']) %}
     {% for style in item.styles %}
         {% set arrStyles = arrStyles|merge([style]) %}
     {% endfor %}
-    {% set arrStyles = arrStyles|merge(['assets/sections/css/'~item.type~'/'~item.type~'.css']) %}
+    {% set arrStyles = arrStyles|merge(['assets/css/sections/'~item.type~'/'~item.type~'.css']) %}
     {% set componentData = item.data %}
     {% include "../sections/"~item.type~"/"~item.type~item.sub~".twig" %}
 {% endfor %}
 
+{% include "./includes/styles.twig" %}
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./assets/js/main.js"></script>
+{% include "./includes/scripts.twig" %}
 {% block scripts %}{% endblock %}
 </body>
 </html>
