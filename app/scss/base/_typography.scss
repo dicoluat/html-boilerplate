@@ -9,10 +9,15 @@ body {
 .heading1 {
   font-family: 'KotexVM-Bold';
   color: $text-color;
+
   span {
     font-family: 'KotexVM-Light';
     font-size: .7em;
     padding-left: .2em;
     color: $brand-color;
   }
+}
+
+.heading2 {
+  font-size: 1.8rem;
 }

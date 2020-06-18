@@ -1,0 +1,28 @@
+<section class="section__services">
+    <div class="container">
+        <h2 class="heading2">{{ componentData.title }}</h2>
+        <div class="card">
+            {% for item in componentData.items %}
+                <div class="service_item">
+                    <div class="service_item__index">
+                        01
+                    </div>
+                    <div class="service_item__content">
+                        <div class="service_item__icon">
+                            <img src="{{ item.icon }}"/>
+                        </div>
+                        <div class="service_item__title">{{ item.title }}</div>
+                        <div class="service_item__desc">{{ item.desc | raw }}
+                        </div>
+                        <div class="service_item__readmore">
+                            <a href="">{{ item.button.title }}</a>
+                        </div>
+                    </div>
+                    <div class="service_item__image">
+                        <img src="./assets/images/sections/services/item1.png"/>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
