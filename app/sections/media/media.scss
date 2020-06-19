@@ -1,0 +1,7 @@
+.section__media {
+  @media (min-width: 760px) {
+    .media__body {
+      display: flex;
+    }
+  }
+}

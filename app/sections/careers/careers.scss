@@ -2,6 +2,14 @@
 
 .section__careers {
 
+  @media (min-width: 760px) {
+    display: flex;
+    .careers__image {
+      width: 50%;
+    }
+  }
+
+
   background-color: $light-grey;
 
   .careers__image {

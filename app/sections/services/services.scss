@@ -6,11 +6,13 @@
       color: $orange;
       font-size: 1rem;
     }
+
     .service-item__image {
       img {
         min-width: 100%;
       }
     }
+
     .service-item__title {
       font-size: 2.3rem;
       color: $dark-blue;
@@ -39,5 +41,17 @@
         font-weight: bold;
       }
     }
+  }
+
+  @media (min-width: 760px) {
+    .service-item {
+      display: flex;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+
+
   }
 }

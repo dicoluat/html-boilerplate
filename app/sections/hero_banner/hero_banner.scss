@@ -15,6 +15,28 @@
 '../../scss/base/helpers';
 
 .section__hero_banner {
+  position: relative;
+
+  .slides {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 30rem;
+    min-width: 100%;
+    .slide {
+      min-width: 100%;
+      min-height: 30rem;
+      background-size: cover;
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    height: 40rem;
+    padding-bottom: 10rem;
+  }
+
   .hero_banner__sub_title {
     font-size: 1rem;
     font-family: 'Open Sans';
@@ -26,7 +48,7 @@
   }
 
   .hero_banner__buttons {
-    border: .1rem solid ;
+    border: .1rem solid;
     margin: 2rem;
   }
 

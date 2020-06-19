@@ -1,7 +1,37 @@
 .item {
   display: flex;
+
+  .item__icon {
+    padding: .4rem;
+    margin-right: .2rem;
+    line-height: 0;
+  }
+
   .item__label {
-    padding-left: .8rem;
+    padding: .4rem;
     font-size: .75rem;
+    flex-grow: 8
+  }
+
+  &__primary {
+    .item__icon {
+      background-color: $dark-blue;
+      color: $light-grey;
+    }
+    .item__label {
+      background-color: $dark-blue;
+      color: $light-grey;
+    }
+  }
+
+  &__orange {
+    .item__icon {
+      background-color: $orange;
+      color: $light-grey;
+    }
+    .item__label {
+      background-color: $orange;
+      color: $light-grey;
+    }
   }
 }
