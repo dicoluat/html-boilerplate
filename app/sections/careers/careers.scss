@@ -1,0 +1,47 @@
+@import '../common';
+
+.section__careers {
+
+  background-color: $light-grey;
+
+  .careers__image {
+    img {
+      min-width: 100%;
+    }
+  }
+
+  .careers__body {
+    padding: .8rem;
+
+    .content {
+      font-size: .75rem;
+    }
+
+    .career-item {
+      padding: 1.2rem;
+      background-color: $white;
+      margin-top: .8rem;
+      margin-bottom: .8rem;
+
+      .career-item__title {
+        font-size: 1rem;
+        color: $dark-blue;
+        font-weight: bold;
+        margin-top: .4rem;
+        margin-bottom: .4rem;
+      }
+
+      .career-item__location {
+        font-size: .75rem;
+        color: $mid-grey;
+      }
+
+      a {
+        font-size: .75rem;
+        color: $dark-grey;
+        font-weight: bold;
+      }
+    }
+  }
+
+}

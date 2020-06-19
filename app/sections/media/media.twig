@@ -1,5 +1,49 @@
+{% set mainItem = componentData.main %}
 <section class="section__media">
     <div class="container">
         <h2 class="heading2">{{ componentData.title ?? '...' }}</h2>
+        <div class="media__main">
+            <article class="article article__primary">
+                <div class="article__image">
+                    <img src="{{ mainItem.image }}"/>
+                </div>
+                <div class="article__body">
+                    <div class="article__category">
+                        <a href="">{{ mainItem.category.title ??'...' }}</a>
+                        <span>{{ mainItem.date ??'...' }}</span>
+                    </div>
+                    <div class="article__title">
+                        <a href="">{{ mainItem.title ??'...' }}</a>
+                    </div>
+                    <div class="article__summary">
+                        {{ mainItem.summary ??'...' }}
+                    </div>
+                    <div class="article__link">
+                        <a href="">{{ mainItem.detail.title ??'...' }}</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="article__list">
+            {% for item in componentData.items %}
+                <article class="article hightlight-top">
+                    <div class="article__body">
+                        <div class="article__category">
+                            <a href="">{{ item.category.title ??'...' }}</a>
+                            <span>{{ item.date ??'...' }}</span>
+                        </div>
+                        <div class="article__title">
+                            <a href="">{{ item.title ??'...' }}</a>
+                        </div>
+                        <div class="article__summary">
+                            {{ item.summary ??'...' }}
+                        </div>
+                        <div class="article__link">
+                            <a href="">{{ item.detail.title ??'...' }}</a>
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
     </div>
 </section>

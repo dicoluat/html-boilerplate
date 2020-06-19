@@ -1,0 +1,43 @@
+@import '../common';
+
+.section__services {
+  .service-item {
+    .service-item__index {
+      color: $orange;
+      font-size: 1rem;
+    }
+    .service-item__image {
+      img {
+        min-width: 100%;
+      }
+    }
+    .service-item__title {
+      font-size: 2.3rem;
+      color: $dark-blue;
+      margin-bottom: 1.5rem;
+
+      &:after {
+        content: ' ';
+        width: 3rem;
+        height: .2rem;
+        display: block;
+        margin-top: 1rem;
+        border-bottom: .2rem solid $orange;
+      }
+    }
+
+    .service-item__desc {
+      font-size: .8rem;
+      color: $mid-grey
+    }
+
+    .service-item__readmore {
+      font-size: .8rem;
+
+      a {
+        color: $dark-grey;
+        font-weight: bold;
+      }
+    }
+  }
+}
