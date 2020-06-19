@@ -1,0 +1,13 @@
+<section class="section__clients">
+    <div class="container">
+        <div class="clients_list">
+            {% for item in componentData.items %}
+                <div class="client-item">
+                    <div class="client-item__image">
+                        <img src="{{ item.image }}"/>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
