@@ -9,17 +9,27 @@ $b-fonts: 'SemiBold', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'He
   color: $dark-grey;
   background-color: $light-grey;
   font-size: .8rem;
+
+  &.has-arrow {
+    &:after {
+      content: '\2794';
+      float: right;
+    }
+  }
+
   padding: .8rem 1.1rem;
-  margin: 0.2rem;
+  margin: 0;
   cursor: pointer;
   display: inline-block;
 
   &.full {
     display: block;
   }
+
   &.round {
     border-radius: .8rem;
   }
+
   &:hover {
 
   }
@@ -27,6 +37,7 @@ $b-fonts: 'SemiBold', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'He
   &__primary {
     color: $white;
     background-color: $blue;
+
     &:hover {
       color: $light-grey;
     }
@@ -35,6 +46,7 @@ $b-fonts: 'SemiBold', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'He
   &__orange {
     color: $white;
     background-color: $orange;
+
     &:hover {
       color: $light-grey;
     }
@@ -43,6 +55,7 @@ $b-fonts: 'SemiBold', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'He
   &__secondary {
     color: $white;
     background-color: $orange;
+
     &:hover {
       color: $light-grey;
     }
@@ -51,6 +64,7 @@ $b-fonts: 'SemiBold', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'He
   &__danger {
     color: $white;
     background-color: $orange;
+
     &:hover {
       color: $light-grey;
     }
@@ -59,6 +73,7 @@ $b-fonts: 'SemiBold', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'He
   &__success {
     color: $white;
     background-color: $orange;
+
     &:hover {
       color: $light-grey;
     }
@@ -67,6 +82,7 @@ $b-fonts: 'SemiBold', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'He
   &__warning {
     color: $white;
     background-color: $orange;
+
     &:hover {
       color: $light-grey;
     }

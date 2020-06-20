@@ -1,8 +1,13 @@
 .card {
   border: .05rem solid $light-grey;
   padding: .8rem;
+
   &__primary {
     background-color: $dark-blue;
     color: $light-grey;
+  }
+
+  &__light {
+    background-color: $light-grey;
   }
 }
