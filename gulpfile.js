@@ -5,6 +5,9 @@ const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const del = require('del');
 const twig = require('gulp-twig');
+const sourcemaps = require('gulp-sourcemaps');
+const plumber = require('gulp-plumber');
+const prefix = require('gulp-autoprefixer');
 
 task('twig', function () {
   return src(['./app/pages/*.twig'])
@@ -23,9 +26,21 @@ task('section-js', function () {
 });
 
 task('section-sass', function () {
-  return src('app/sections/**/*.scss')
-    .pipe(sass()) // Using gulp-sass
-    .pipe(dest('dist/assets/css/sections'))
+  return src('app/sections/**/*.scss').pipe(sourcemaps.init()).pipe(plumber({
+    handleError: function (err) {
+      console.log(err);
+      this.emit('end');
+    },
+  })).pipe(sass({
+      includePaths: ['dist/assets/css/sections'],
+      outputStyle: 'expanded',
+    }).on('error', function (err) {
+      console.log(err.message);
+      this.emit('end');
+    }),
+  ).pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
+    cascade: true,
+  })).pipe(sourcemaps.write('.')).pipe(dest('dist/assets/css/sections'));
 });
 
 task('sass', function () {

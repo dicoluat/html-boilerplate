@@ -28,5 +28,10 @@
     "gulp-sass": "^4.1.0",
     "gulp-twig": "^1.2.0",
     "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sourcemaps": "^2.6.5"
   }
 }

@@ -3,9 +3,6 @@
 // -----------------------------------------------------------------------------
 
 
-
-
-
 /// Regular font family
 /// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
@@ -15,48 +12,29 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
 
-
-
-
 /// Copy text color
 /// @type Color
 $text-color: rgb(34, 34, 34) !default;
 
-/// Main brand color
-/// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+$white-color: #ECECEC;
 
-/// White
-/// @type Color
-$white: #ECECEC;
+$pink-color: #FF00B4;
 
-/// Light grey
-/// @type Color
-$light-grey: #ECECEC;
+$blue-color: #0075FF;
 
-/// Medium grey
-/// @type Color
-$mid-grey: #808080;
+$purple-color: #5918E8;
 
-/// Dark grey
-/// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
+$red-color: #FF1A53;
 
-// Dark
-/// @type Color
-$dark: #242424;
+$light-gray-color: #D1D3D4;
 
-// Blue
-/// @type Color
-$blue: #0947D1;
+$mid-gray-color: #BCBEC0;
 
-// Dark Blue
-/// @type Color
-$dark-blue: #0E2B8D;
+$gray-color: #939598;
 
-// Orange
-/// @type Color
-$orange: #FF7800;
+$dark-gray-color: #414042;
+
+$dark-color: #231F20;
 
 
 /// Container's maximum width
@@ -64,19 +42,14 @@ $orange: #FF7800;
 $max-width: 1180px !default;
 
 
-
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+        'small': 320px,
+        'medium': 768px,
+        'large': 1024px,
 ) !default;
-
-
-
-
 
 
 /// Relative or absolute URL where all assets are served from

@@ -1,0 +1,48 @@
+<div class="section__about">
+  <div class="about-page">
+    <div class="row">
+      <div class="col col-lg-3 col-xl-2 d-md-none d-lg-block">
+        <div class="k_tabs">
+          <ul>
+            {% for key,item in componentData.items %}
+              <li>
+                <a
+                    data-index="{{ key }}"
+                    class="tabs_item{% if key == 0 %} active{% endif %}">
+                  {{ item.tab ?? '...' }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col col-lg-9 col-xl-10">
+        <div>
+          <div class="slider-for">
+            {% for item in componentData.items %}
+              <div>
+                <div class="row d-flex align-items-center">
+                  <div class="tab_content col-lg-6">
+                    <h2 class="heading2">
+                      {{ item.title ?? '...' }}
+                    </h2>
+                    <div class="summary">
+                      {{ item.summary ?? '...' }}
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="tab_image ">
+                      <img width="90%" src="{{ item.image ?? '' }}">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

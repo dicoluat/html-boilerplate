@@ -1,0 +1,68 @@
+{% extends "../layouts/html.twig" %}
+{% set seoData = {
+    title: 'About'
+} %}
+{% set components = [
+
+    {
+        type: 'header',
+        sub: '',
+        styles: [''],
+        scripts: [''],
+        data:
+        {
+
+        }
+    },
+    {
+        type: 'page_about',
+        styles: ['//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'],
+        scripts: ['//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'],
+        data:
+        {
+            items:
+            [
+                {
+                    tab: 'People',
+                    title: '<span>Find your</span><br>
+                  people',
+                    summary: 'Recognize and reward members by the content of their character.',
+                    image: './assets/images/about/item1.svg'
+                },
+                {
+                    tab: 'Conversation',
+                    title: '<span>Join</span> local<br>
+                  conversations',
+                    summary: 'By global and local friends and great numbers of trending conversations.',
+                    image: './assets/images/about/item2.svg'
+                },
+                {
+                    tab: 'Map',
+                    title: '<span>Discover who</span><br>
+                  <span>& what in your</span><br>
+                  area',
+                    summary: 'Build better communities with local conversations.',
+                    image: './assets/images/about/item3.svg'
+                },
+                {
+                    tab: 'Wallet',
+                    title: '<span>Send & receive</span><br>
+                  money <span>instantly</span>',
+                    summary: 'Recognize and reward members for the service they provide to others in the community.',
+                    image: './assets/images/about/item4.svg'
+                }
+            ]
+        }
+    },
+    {
+        type: 'footer',
+        sub: '',
+        styles: [''],
+        scripts: [''],
+        data:
+        {
+
+        }
+    }
+] %}
+{% block content %}{% endblock %}

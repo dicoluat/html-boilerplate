@@ -1,2 +1,32 @@
+@import "../../scss/abstracts/variables";
+
 .section__header {
+  nav {
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
+    text-align: right;
+    ul {
+      list-style-type: none;
+      li {
+        padding: .5rem 1rem;
+        display: inline-block;
+        a {
+          text-transform: uppercase;
+          &.active {
+            font-weight: bold;
+            color: $blue-color;
+            &:after {
+              content: '';
+              display: block;
+              width: 2rem;
+              height: 0.1rem;
+              margin-top: 1rem;
+              background-color: $blue-color;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -2,73 +2,65 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 
-$b-fonts: 'SemiBold', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$b-fonts: 'Montserrat', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 .button {
   font-family: $b-fonts;
-  color: $dark-grey;
-  background-color: $light-grey;
-  font-size: .8rem;
-  padding: .8rem 1.1rem;
-  margin: 0.2rem;
+  color: $white-color;
+  background-color: $blue-color;
+  text-transform: uppercase;
+  text-decoration: none !important;
+
+  font-size: .7rem;
+  padding: .7rem 1.75rem;
+
+  @media (min-width: 800px) {
+    font-size: .8rem;
+    padding: 1rem 2rem;
+  }
+
+  font-weight: bold;
   cursor: pointer;
   display: inline-block;
+
+  &.has-arrow {
+    &:after {
+      content: '→';
+      padding-left: .8rem;
+    }
+  }
 
   &.full {
     display: block;
   }
+
   &.round {
-    border-radius: .8rem;
+    border-radius: 1.75rem;
   }
+
   &:hover {
 
   }
 
+  &.outline {
+    background-color: transparent !important;
+    border: .1rem solid $mid-gray-color;
+  }
+
   &__primary {
-    color: $white;
-    background-color: $blue;
-    &:hover {
-      color: $light-grey;
-    }
-  }
+    color: $white-color;
+    background-color: $blue-color;
 
-  &__orange {
-    color: $white;
-    background-color: $orange;
     &:hover {
-      color: $light-grey;
+      color: $blue-color;
     }
-  }
 
-  &__secondary {
-    color: $white;
-    background-color: $orange;
-    &:hover {
-      color: $light-grey;
+    &.round {
+      border-color: $blue-color;
     }
-  }
 
-  &__danger {
-    color: $white;
-    background-color: $orange;
-    &:hover {
-      color: $light-grey;
-    }
-  }
-
-  &__success {
-    color: $white;
-    background-color: $orange;
-    &:hover {
-      color: $light-grey;
-    }
-  }
-
-  &__warning {
-    color: $white;
-    background-color: $orange;
-    &:hover {
-      color: $light-grey;
+    &.outline {
+      color: $blue-color;
     }
   }
 }

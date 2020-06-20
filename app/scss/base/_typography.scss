@@ -4,15 +4,56 @@
 body {
   color: $text-color;
   font: normal 125% / 1.4 $text-font-stack;
+  font-family: "Montserrat", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: initial;
+  font-family: 'KotexVM-Bold';
+  color: $blue-color;
+
+  span {
+    font-family: 'KotexVM-Light';
+    color: $pink-color;
+  }
 }
 
 .heading1 {
-  font-family: 'KotexVM-Bold';
-  color: $text-color;
+  font-size: 2.3rem;
+
   span {
-    font-family: 'KotexVM-Light';
-    font-size: .7em;
     padding-left: .2em;
-    color: $brand-color;
+  }
+
+  @media (min-width: 960px) {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+}
+
+.heading2 {
+  font-size: 2.3rem;
+
+  span {
+    padding-left: .2em;
+  }
+
+  @media screen and (min-width: 960px) {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+  }
+}
+
+p {
+  font-size: .7rem;
+}
+
+.summary {
+  padding: .5rem 0;
+  font-size: 1.2rem;
+  color: $dark-gray-color;
+  @media screen and  (min-width: 960px) {
+    font-size: 1.6rem;
   }
 }
